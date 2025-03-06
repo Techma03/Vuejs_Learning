@@ -28,7 +28,11 @@
         </header>
 
         <div class="mt-10 ml-8 mr-8" id="app">
-           {{message}}
+           {{persons}}
+           <button @click="addPerson" class="px-6 py-2 bg-black text-white rounded-lg">
+           Ajouter personne
+        </button>
+        
         </div>
         <script src="../lib/vue.js"></script>
         <script src="app.js"></script>
