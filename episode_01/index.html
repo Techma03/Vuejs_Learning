@@ -58,7 +58,7 @@
             </div>
 
             <!-- v-if="success" -->
-            <div :class="success ? 'bg-green-100' : 'bg-red-100'"
+            <div v-if="success" :class="success ? 'bg-green-100' : 'bg-red-100'"
                 class="mt-4 p-4 border border-green-400 text-green-800 rounded-lg flex items-center shadow-md relative">
                 <!-- Icône de validation -->
                 <svg class="w-6 h-6 mr-2 text-green-600" fill="none"
