@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Propriétés combinées & Watchers</title>
+        <script src="../lib/css/style.js"></script>
+    </head>
+
+    <body>
+
+        <header class="bg-black text-white">
+            <nav
+                class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+                aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        Tutoriel
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-white">Log in
+                        <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+        </header>
+        <div class="mt-15 ml-10 mr-10" id="app"> 
+
+            <input type="checkbox" class="border" :v-model="success">
+            <div :class="cls"
+            class="mt-4 p-4 border border-green-400 text-green-800 rounded-lg flex items-center shadow-md relative">
+            <!-- Icône de validation -->
+            <svg class="w-6 h-6 mr-2 text-green-600" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p>{{message}}</p>
+    
+            <!-- Bouton de fermeture avec  v-on:click ou @click -->
+            <button @click="close"
+                class="absolute top-2 right-2 text-green-600 hover:text-green-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+      
+        </div>
+         </div>
+
+
+        </div>
+        <script src="../lib/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
